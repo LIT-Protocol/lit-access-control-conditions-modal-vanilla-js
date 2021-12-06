@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/main.css",
+    "main.js": "/index.js",
+    "main.js.map": "/index.js.map",
+    "index.html": "/index.html",
+    "index.js.LICENSE.txt": "/index.js.LICENSE.txt",
+    "main.css.map": "/main.css.map",
+    "static/media/able-to-access.module.scss": "/static/media/wallet.76db641c.svg",
+    "static/media/share-modal.module.scss": "/static/media/poap-logo.fcb0c058.svg"
+  },
+  "entrypoints": [
+    "main.css",
+    "index.js"
+  ]
+}

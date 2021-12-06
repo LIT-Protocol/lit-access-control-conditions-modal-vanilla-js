@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lit-access-control-conditions-modal-vanilla-js/dist/main.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/lit-access-control-conditions-modal-vanilla-js/dist/index.js"></script>
+
+    <script>
+      function openShareModal() {
+        console.log("open share modal");
+        ACCM.ReactContentRenderer.render(
+          ACCM.ShareModal,
+          // props to be passed to the ShareModal component
+          {
+            sharingItems: [],
+            onAccessControlConditionsSelected: function (
+              accessControlConditions
+            ) {
+              console.log("accessControlConditions", accessControlConditions);
+            },
+            onClose: function () {
+              console.log("close share modal");
+              ACCM.ReactContentRenderer.unmount(
+                document.getElementById("shareModal")
+              );
+            },
+            getSharingLink: function (sharingItem) {
+              console.log("getSharingLink", sharingItem);
+              return "https://www.google.com";
+            },
+            showStep: "ableToAccess",
+          },
+          // target DOM node
+          document.getElementById("shareModal")
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="shareModal"></div>
+    <button onclick="javascript:openShareModal()">Open Share Modal</button>
+  </body>
+</html>
