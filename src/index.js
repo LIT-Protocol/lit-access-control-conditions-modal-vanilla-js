@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ShareModal } from "lit-access-control-conditions-modal";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// buffer of DOM elements rendering React components
+var nodes = [];
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// utility to mount React nodes to target DOM elements
+const ReactContentRenderer = {
+  unmountAll: function () {
+    if (nodes.length === 0) {
+      return;
+    }
+    nodes.forEach((node) => ReactDOM.unmountComponentAtNode(node));
+    nodes = [];
+  },
+  unmount: function (node) {
+    ReactDOM.unmountComponentAtNode(node);
+  },
+  /**
+   * Creates, renders and returns a React element created
+   * from component class using given props and rendered
+   * into the targetNode.
+   */
+  render: function (component, props, targetNode, callback) {
+    var reactElement = React.createElement(component, props, null);
+    ReactDOM.render(reactElement, targetNode, callback);
+    nodes.push(targetNode);
+    return reactElement;
+  },
+};
+
+// // re-export React components
+// for (var prop in AccessControlModal) {
+//   if (AccessControlModal.hasOwnProperty(prop)) {
+//     exports[prop] = AccessControlModal[prop];
+//   }
+// }
+
+export { ReactContentRenderer, ShareModal };
