@@ -82,5 +82,7 @@ In our HTML, we have a div that the modal is loaded into, and a button that call
 ```
 
 Once the user picks their access control conditions, the function passed in to `onAccessControlConditionsSelected` will be called with the accessControlConditions as a parameter. At this point, you should use the accessControlConditions variable to provision access using one of the methods below:
+
 Dynamic Content - Provisoning access to a resource: https://github.com/LIT-Protocol/lit-js-sdk#dynamic-content---provisoning-access-to-a-resource
+
 Or Static Content - Storing any static content and manually storing the metadata: https://github.com/LIT-Protocol/lit-js-sdk#static-content---storing-any-static-content-and-manually-storing-the-metadata
