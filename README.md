@@ -21,7 +21,7 @@ Check out example.html to see a complete example
 
 You need to add 2 tags to the head section of your website:
 
-```
+```html
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/lit-access-control-conditions-modal-vanilla-js/dist/main.css"
@@ -31,7 +31,7 @@ You need to add 2 tags to the head section of your website:
 
 You also need to define functions that will be called when you want to show or close the modal. In this example, we have a button that will call showShareModal() when clicked.
 
-```
+```javascript
 <script>
   function closeModal() {
     console.log("close share modal");
@@ -74,7 +74,7 @@ You also need to define functions that will be called when you want to show or c
 
 In our HTML, we have a div that the modal is loaded into, and a button that calls openShareModal when clicked:
 
-```
+```html
 <body>
   <div id="shareModal"></div>
   <button onclick="javascript:openShareModal()">Open Share Modal</button>
