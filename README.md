@@ -31,13 +31,11 @@ You need to add 2 tags to the head section of your website:
 
 You also need to define functions that will be called when you want to show or close the modal. In this example, we have a button that will call showShareModal() when clicked.
 
-```javascript
+```html
 <script>
   function closeModal() {
     console.log("close share modal");
-    ACCM.ReactContentRenderer.unmount(
-      document.getElementById("shareModal")
-    );
+    ACCM.ReactContentRenderer.unmount(document.getElementById("shareModal"));
   }
   function openShareModal() {
     console.log("open share modal");
@@ -46,9 +44,7 @@ You also need to define functions that will be called when you want to show or c
       // props to be passed to the ShareModal component.  These are documented here: https://github.com/LIT-Protocol/lit-access-control-conditions-modal#props
       {
         sharingItems: [],
-        onAccessControlConditionsSelected: function (
-          accessControlConditions
-        ) {
+        onAccessControlConditionsSelected: function (accessControlConditions) {
           console.log(
             "accessControlConditions from ShareModal: ",
             accessControlConditions
