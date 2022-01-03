@@ -1,6 +1,6 @@
 {
   "name": "lit-access-control-conditions-modal-vanilla-js",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -39,7 +39,7 @@
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
-    "lit-access-control-conditions-modal": "^1.1.26",
+    "lit-access-control-conditions-modal": "^1.1.27",
     "lit-js-sdk": "^1.1.99",
     "mini-css-extract-plugin": "0.11.3",
     "optimize-css-assets-webpack-plugin": "5.0.4",
