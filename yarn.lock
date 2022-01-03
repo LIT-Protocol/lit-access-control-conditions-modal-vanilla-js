@@ -8955,10 +8955,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lit-access-control-conditions-modal@^1.1.26:
-  version "1.1.26"
-  resolved "https://registry.yarnpkg.com/lit-access-control-conditions-modal/-/lit-access-control-conditions-modal-1.1.26.tgz#9e8f45eec1603e331ee6efe3176d0a585887e241"
-  integrity sha512-fx1bYSaSfNMo/GFtrBuVvaPL0x1rV0OpXbUvCXL359RZN+9xTld7d0RBO4mPeSPhpFFBdnExueR2fUqZlf67IQ==
+lit-access-control-conditions-modal@^1.1.27:
+  version "1.1.27"
+  resolved "https://registry.yarnpkg.com/lit-access-control-conditions-modal/-/lit-access-control-conditions-modal-1.1.27.tgz#678c15ae43d8e4163dd9abe2a3d8a8a72717e193"
+  integrity sha512-xvoqbnI68dfln1CFeUv9rUixw7BxydXp++40mIuzWtiskzNB2jqcurnoTH9mUeVucVMFfQCDmvwc1V5jIRUO8g==
   dependencies:
     "@babel/polyfill" "^7.12.1"
     "@emotion/react" "^11.7.0"
